@@ -1,0 +1,12 @@
+<hr>
+
+<div class="card-columns">
+
+  	<div class="card" *ngFor="let player of myFantasyTeam; let i = index">
+    	<div class="card-body">    	
+      	<h5 class="card-title">{{ player.firstName}}</h5>
+	    <p class="card-text">{{ player.playerId }}</p>
+	    <p class="card-text"><small class="text-muted">{{ player.teamId }} </small></p>      
+
+    </div>
+</div>
