@@ -18,10 +18,10 @@ export class MyteamService {
 
 }
 
-/*export interface Team {
+export interface Team {
 	firstName: string,
 	lastName: string,
 	playerId: number,
 	teamId: number,
 	fullName: string
-}*/
+}
