@@ -1,11 +1,28 @@
 <hr>
 
-<div class="card-columns">
-
-  	<div class="card" *ngFor="let oneStat of myStats; let i = index">
-    	<div class="card-body">    	
-      	<h5 class="card-title">{{ oneStat.playerId }}</h5>
-	    <p class="card-text">{{ oneStat.playerStats.nbaFantasyPts }}</p>
-
-    </div>
-</div>
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">PlayerID</th>
+      <th scope="col">Pts </th>
+      <th scope="col">FG %</th>
+      <th scope="col">3FG %</th>
+      <th scope="col">Asist</th>
+      <th scope="col">Reb</th>
+      <th scope="col">Fsy Pts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let oneStat of myStats; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ oneStat.playerId }}</td>
+      <td>{{ oneStat.playerStats.pts }}</td>
+      <td>{{ oneStat.playerStats.fgPct | percent }}</td>
+      <td>{{ oneStat.playerStats.fg3Pct | percent }}</td>
+      <td>{{ oneStat.playerStats.ast }}</td>
+      <td>{{ oneStat.playerStats.reb }}</td>
+      <td>{{ oneStat.playerStats.nbaFantasyPts }}</td>
+    </tr>
+  </tbody>
+</table>
