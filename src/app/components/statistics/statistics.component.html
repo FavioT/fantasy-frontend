@@ -1,0 +1,11 @@
+<hr>
+
+<div class="card-columns">
+
+  	<div class="card" *ngFor="let oneStat of myStats; let i = index">
+    	<div class="card-body">    	
+      	<h5 class="card-title">{{ oneStat.playerId }}</h5>
+	    <p class="card-text">{{ oneStat.playerStats.nbaFantasyPts }}</p>
+
+    </div>
+</div>

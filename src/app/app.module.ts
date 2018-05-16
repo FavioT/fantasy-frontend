@@ -7,6 +7,7 @@ import { APP_ROUTING } from './app.routes';
 
 // Services
 import { MyteamService } from './services/myteam.service';
+import { StatisticsService } from './services/statistics.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { MyteamComponent } from './components/myteam/myteam.component';
 import { RankingComponent } from './components/ranking/ranking.component';
+import { StatisticsComponent } from './components/statistics/statistics.component';
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { RankingComponent } from './components/ranking/ranking.component';
         HomeComponent,
         NavbarComponent,
         MyteamComponent,
-        RankingComponent
+        RankingComponent,
+        StatisticsComponent
     ],
     imports: [
         BrowserModule,
@@ -30,7 +33,8 @@ import { RankingComponent } from './components/ranking/ranking.component';
         HttpClientModule
     ],
     providers: [
-        MyteamService
+        MyteamService,
+        StatisticsService
     ],
     bootstrap: [AppComponent]
 })

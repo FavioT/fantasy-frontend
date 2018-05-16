@@ -1,12 +1,12 @@
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { MyteamComponent } from './components/myteam/myteam.component';
-import { RankingComponent } from './components/ranking/ranking.component';
+import { StatisticsComponent } from './components/statistics/statistics.component';
 
 const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'myteam', component: MyteamComponent },
-  { path: 'ranking', component: RankingComponent },
+  { path: 'stats', component: StatisticsComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
