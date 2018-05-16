@@ -3,10 +3,11 @@
 <div class="card-columns">
 
   	<div class="card" *ngFor="let player of myFantasyTeam; let i = index">
-    	<div class="card-body">    	
-      	<h5 class="card-title">{{ player.firstName}}</h5>
-	    <p class="card-text">{{ player.playerId }}</p>
-	    <p class="card-text"><small class="text-muted">{{ player.teamId }} </small></p>      
+  		<img class="card-img-top" [src]="player.teamLogo" [alt]="player.firstName">
+    	<div class="card-body">
+      	<h5 class="card-title">{{ player.fullName}}</h5>
+	    <p class="card-text">{{ player.teamName }}</p>
+	    <p class="card-text"><small class="text-muted">{{ player.playerId }} </small></p>      
 
     </div>
 </div>
