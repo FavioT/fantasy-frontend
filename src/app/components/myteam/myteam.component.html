@@ -1,13 +1,12 @@
 <hr>
 
-<div class="card-columns">
-
-  	<div class="card" *ngFor="let player of myFantasyTeam; let i = index">
-  		<img class="card-img-top" [src]="player.teamLogo" [alt]="player.firstName">
-    	<div class="card-body">
-      	<h5 class="card-title">{{ player.fullName}}</h5>
-	    <p class="card-text">{{ player.teamName }}</p>
-	    <p class="card-text"><small class="text-muted">{{ player.playerId }} </small></p>      
-
-    </div>
+ <div class="card-columns">
+  <div class="card bg-dark text-white text-center" *ngFor="let player of myFantasyTeam; let i = index" style="width: 300px">         
+      <img class="card-img-top" [src]="player.teamLogo" [alt]="player.firstName">
+      <div class="card-body">
+        <h5 class="card-title">{{ player.fullName}}</h5>
+        <p class="card-text">{{ player.teamName }}</p>
+        <a href="#" class="btn btn-secondary">See stats</a>
+      </div>
+  </div>
 </div>
