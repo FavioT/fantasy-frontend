@@ -16,6 +16,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { MyteamComponent } from './components/myteam/myteam.component';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
         NavbarComponent,
         MyteamComponent,
         RankingComponent,
-        StatisticsComponent
+        StatisticsComponent,
+        SearchComponent
     ],
     imports: [
         BrowserModule,

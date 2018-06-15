@@ -6,11 +6,11 @@ const httpOptions = {
 };
 
 @Injectable()
-export class MyteamService {  
+export class MyteamService {
 
     constructor( private _http: HttpClient ) { }
 
-    private apiURL = 'http://localhost:3000/api/v1/myteam';
+    private apiURL = 'http://localhost:3000/api/v1/posts';
 
     getTeam() {
         return this._http.get(this.apiURL);

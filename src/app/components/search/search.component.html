@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <label for="termino">Search player</label>
+      <input type="text" placeholder="Search player..." class="form-control" (keyup)="searchPlayers()">
+    </div>
+
+    <div class="col-md-9" *ngIf="termino.length > 1">
+      <h1 class="text-capitalize">{{ termino }}</h1>
+      <hr>
+      <div class="row">
+        <!--<div class="col-md-3 text-center puntero" *ngFor="let players of _spotify.artistas">-->
+          <!--<img [src]="artista.images | sinfoto " class="img-thumbnail">-->
+          <!--<p>{{ artista.name }}</p>-->
+        <!--</div>-->
+      </div>
+    </div>
+  </div>
+</div>
