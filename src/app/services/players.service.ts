@@ -1,12 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import 'rxjs/add/operator/map';
+
+let config = require('../../config/config.json');
+
 @Injectable()
 export class PlayersService {
 
-  constructor( private _http: HttpClient ) { }
+  players: any[] = [];
 
-  private apiURL = 'http://66.97.33.14:3000/api/v1/players';
+  constructor( private _http: HttpClient ) { console.log(config); }
+
+  private apiURL = config.endpoint + ':' + config.port + config.uriPlayersPath;
 
   getAllPlayers() {
     return this._http.get(this.apiURL);
