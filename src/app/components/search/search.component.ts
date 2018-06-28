@@ -12,15 +12,14 @@ export class SearchComponent implements OnInit {
   constructor( public _players: PlayersService ) { }
 
   searchPlayers() {
-    console.log(this.termino);
 
     if (this.termino.length === 0) {
       return;
     }
 
-    this._players.getAllPlayers()
-      .subscribe( data => {
-        console.log(data);
+    this._players.getPlayer( this.termino )
+      .subscribe( player => {
+        console.log(player);
       })
   }
 

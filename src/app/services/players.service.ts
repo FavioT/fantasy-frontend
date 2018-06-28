@@ -8,14 +8,22 @@ let config = require('../../config/config.json');
 @Injectable()
 export class PlayersService {
 
-  players: any[] = [];
+  player: any[] = [];
 
-  constructor( private _http: HttpClient ) { console.log(config); }
+  constructor( private _http: HttpClient ) { }
 
-  private apiURL = config.endpoint + ':' + config.port + config.uriPlayersPath;
+  private apiURL = config.endpoint + ':' + config.port;
 
   getAllPlayers() {
-    return this._http.get(this.apiURL);
+    return this._http.get(this.apiURL + '/api/v1/players');
+  }
+
+  getPlayer( termino: string ) {
+    return this._http.get(this.apiURL + '/api/v1/players/' + termino)
+      .map( (resp: any) => {
+        this.player = resp.data;
+        return this.player;
+      });
   }
 
 }
